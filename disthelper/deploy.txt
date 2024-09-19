@@ -1,0 +1,25 @@
+Deploy steps:
+(For publishing to NPM and jsDelivr. Pushing a tag is sufficient for publishing to Deno.)
+
+> make sure that CHANGELOG.md has been updated, including the date.
+
+npm run clean
+npm test
+npm run build
+
+> manually test examples
+
+replace "0.x.0-beta.old" by "0.x.0-beta.new"
+
+npm pack
+> manually check zip contents
+
+npm login
+npm publish
+
+> commit changes with title "v0.x.0-beta.new"
+
+git tag v0.x.0-beta.new
+git push origin --tags
+
+> update the Live examples (NOT PRESENT YET)
