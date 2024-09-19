@@ -23,28 +23,35 @@
             return d;
         }
 
-        let dots = [];
+        function generate() {
+          let dots = [];
 
-        let numberOfBlueDots = getRandomInt(8) + 3;
-        for (let i = 0; i < numberOfBlueDots; i++) {
-            let size = getRandomInt(2) + 1
-            dots.push(d(size));
+          let numberOfBlueDots = getRandomInt(8) + 3;
+          for (let i = 0; i < numberOfBlueDots; i++) {
+              let size = getRandomInt(3) + 2
+              dots.push(d(size));
+          }
+
+          let numberOfYellowDots = getRandomInt(8) + 3;
+          for (let i = 0; i < numberOfYellowDots; i++) {
+              let size = getRandomInt(3) + 2
+              dots.push(d(size, 'orange'));
+          }
+          settings.dots = dots;
+          let html = dotty.getHtml(settings);
+          document.getElementById("put-it-here").innerHTML = html;
         }
 
-        let numberOfYellowDots = getRandomInt(8) + 3;
-        for (let i = 0; i < numberOfYellowDots; i++) {
-            let size = getRandomInt(2) + 1
-            dots.push(d(size, 'orange'));
-        }
-        settings.dots = dots;
-        let html = dotty.getHtml(settings);
-        console.log(html);
-      document.getElementById("put-it-here").innerHTML = html;
+        generate();
+
+        document.getElementById('next').onclick = () => generate();
+        
     </script>
   </head>
   <body>
     <div id="put-it-here">
 
     </div>
+    <button id="next">Next</button>
   </body>
 </html>
