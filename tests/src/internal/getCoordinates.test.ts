@@ -1,6 +1,6 @@
 import { describe } from 'mocha';
 import { expect } from 'chai';
-import { getCoordinates } from '../../../src/internal/getCoordinates';
+import { getCoordinates as getCoordinates } from '../../../src/internal/getCoordinates';
 import { Settings } from '../../../src/x';
 import { Coordinate } from '../../../src/internal/Coordinate';
 

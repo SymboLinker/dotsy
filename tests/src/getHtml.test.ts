@@ -1,6 +1,7 @@
 import { describe } from 'mocha';
 import { expect } from 'chai';
 import { getHtml, Settings } from '../../src/x';
+import { Dot } from '../../src/settings/Dot';
 
 describe('Basic stuff', () => {
   it(`returns a div with class name "dots"`, () => {
@@ -9,6 +10,6 @@ describe('Basic stuff', () => {
     // Act
     let result = getHtml(settings);
     // Assert
-    expect(result.startsWith('<div class="dots">')).to.be.true;
+    expect(result.startsWith('<div class="dots"')).to.be.true;
   });
 });
