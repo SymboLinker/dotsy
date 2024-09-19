@@ -1,5 +1,4 @@
 export class Dot {
-    backgroundColor : string = '#0000FF';
-    borderColor : string = '#808080';
+    color : string = '#0000FF';
     radius : number = 5;
 }

@@ -7,8 +7,9 @@
     <script type="module">
       import * as dotty from '../../dist/dots.es2020-esm.js';
       let settings = new dotty.Settings();
-      settings.width = 500;
-      settings.height = 500;
+      settings.width = 80;
+      settings.height = 80;
+      settings.unit = 'vmin';
 
       function getRandomInt(exclusiveMax) {
             return Math.floor(Math.random() * exclusiveMax);
@@ -17,23 +18,23 @@
         let d = (radius, color = null) => { let d = new dotty.Dot();
             d.radius = radius;
             if (color != null) {
-                d.backgroundColor = color;
+                d.color = color;
             }
             return d;
-            }
+        }
 
         let dots = [];
 
         let numberOfBlueDots = getRandomInt(8) + 3;
         for (let i = 0; i < numberOfBlueDots; i++) {
-            let size = getRandomInt(30) + 15
+            let size = getRandomInt(2) + 1
             dots.push(d(size));
         }
 
         let numberOfYellowDots = getRandomInt(8) + 3;
         for (let i = 0; i < numberOfYellowDots; i++) {
-            let size = getRandomInt(30) + 15
-            dots.push(d(size, 'yellow'));
+            let size = getRandomInt(2) + 1
+            dots.push(d(size, 'orange'));
         }
         settings.dots = dots;
         let html = dotty.getHtml(settings);
