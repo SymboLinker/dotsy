@@ -7,5 +7,6 @@ describe('flat', () => {
   it('allows importing all from the same root namespace', () => {
     expect(dots.Settings).is.not.null;
     expect(dots.getHtml).is.not.null;
+    expect(dots.Dot).is.not.null;
   });
 });

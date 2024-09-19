@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dots [unstyled example]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script type="module">
+      import * as dotty from '../../dist/dots.es2020-esm.js';
+      let settings = new dotty.Settings();
+      settings.width = 500;
+      settings.height = 500;
+
+      function getRandomInt(exclusiveMax) {
+            return Math.floor(Math.random() * exclusiveMax);
+        }
+
+        let d = (radius, color = null) => { let d = new dotty.Dot();
+            d.radius = radius;
+            if (color != null) {
+                d.backgroundColor = color;
+            }
+            return d;
+            }
+
+        let dots = [];
+
+        let numberOfBlueDots = getRandomInt(8) + 3;
+        for (let i = 0; i < numberOfBlueDots; i++) {
+            let size = getRandomInt(30) + 15
+            dots.push(d(size));
+        }
+
+        let numberOfYellowDots = getRandomInt(8) + 3;
+        for (let i = 0; i < numberOfYellowDots; i++) {
+            let size = getRandomInt(30) + 15
+            dots.push(d(size, 'yellow'));
+        }
+        settings.dots = dots;
+        let html = dotty.getHtml(settings);
+        console.log(html);
+      document.getElementById("put-it-here").innerHTML = html;
+    </script>
+  </head>
+  <body>
+    <div id="put-it-here">
+
+    </div>
+  </body>
+</html>
