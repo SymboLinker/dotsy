@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Dots [unstyled example]</title>
+    <title>Dotsy [unstyled example]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <script type="module">
-      import * as dotty from '../../dist/dots.es2020-esm.js';
-      let settings = new dotty.Settings();
+      import * as dotsy from '../../dist/dotsy.es2020-esm.js';
+      let settings = new dotsy.Settings();
       settings.width = 80;
       settings.height = 80;
       settings.unit = 'vmin';
@@ -15,7 +15,8 @@
             return Math.floor(Math.random() * exclusiveMax);
         }
 
-        let d = (radius, color = null) => { let d = new dotty.Dot();
+        let d = (radius, color = null) => { 
+          let d = new dotsy.Dot();
             d.radius = radius;
             if (color != null) {
                 d.color = color;
@@ -38,7 +39,7 @@
               dots.push(d(size, 'orange'));
           }
           settings.dots = dots;
-          let html = dotty.getHtml(settings);
+          let html = dotsy.getHtml(settings);
           document.getElementById("put-it-here").innerHTML = html;
         }
 

@@ -25,7 +25,7 @@ for (const file of files) {
       .split('\n')
       .filter((x) => !x.startsWith('import '));
     for (const line of lines) {
-      fs.appendFileSync('./dist/dots.d.ts', line + '\n');
+      fs.appendFileSync('./dist/dotsy.d.ts', line + '\n');
     }
   });
 }

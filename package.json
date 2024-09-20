@@ -3,27 +3,28 @@
     "strictcheck": "tsc --noEmit --strict",
     "test": "npm run strictcheck && nyc ./node_modules/.bin/_mocha 'tests/**/*.test.ts'",
     "clean": "npx eslint . --fix",
-    "build": "rimraf dist && npm run strictcheck && esbuild src/x.ts --bundle --format=iife --target=es6 --global-name=mke --outfile=dist/dots.es2015-iife.js & esbuild src/x.ts --bundle --format=esm --target=es2017 --outfile=dist/dots.es2017-esm.js & esbuild src/x.ts --bundle --minify --format=iife --target=es6 --global-name=mke --outfile=dist/dots.es2015-iife.min.js & esbuild src/x.ts --bundle --minify --format=esm --target=es2017 --outfile=dist/dots.es2017-esm.min.js & esbuild src/x.ts --bundle --format=esm --target=es2020 --outfile=dist/dots.es2020-esm.js & esbuild src/x.ts --bundle --minify --format=esm --target=es2020 --outfile=dist/dots.es2020-esm.min.js && esbuild src/x.ts --bundle --format=cjs --target=es2017 --outfile=dist/dots.es2017.cjs && tsc --declaration --emitDeclarationOnly --outDir ./dist/declarations && node disthelper/declarationbundler.js && rimraf dist/declarations && node disthelper/fileextensionsincreaser.js",
+    "build": "rimraf dist && npm run strictcheck && esbuild src/x.ts --bundle --format=iife --target=es6 --global-name=mke --outfile=dist/dotsy.es2015-iife.js & esbuild src/x.ts --bundle --format=esm --target=es2017 --outfile=dist/dotsy.es2017-esm.js & esbuild src/x.ts --bundle --minify --format=iife --target=es6 --global-name=mke --outfile=dist/dotsy.es2015-iife.min.js & esbuild src/x.ts --bundle --minify --format=esm --target=es2017 --outfile=dist/dotsy.es2017-esm.min.js & esbuild src/x.ts --bundle --format=esm --target=es2020 --outfile=dist/dotsy.es2020-esm.js & esbuild src/x.ts --bundle --minify --format=esm --target=es2020 --outfile=dist/dotsy.es2020-esm.min.js && esbuild src/x.ts --bundle --format=cjs --target=es2017 --outfile=dist/dotsy.es2017.cjs && tsc --declaration --emitDeclarationOnly --outDir ./dist/declarations && node disthelper/declarationbundler.js && rimraf dist/declarations && node disthelper/fileextensionsincreaser.js",
     "up-packages": "npx npm-check-updates -u",
     "up-vulnerable-packages": "npm audit fix",
     "lock": "npm i --package-lock-only"
   },
-  "name": "dots",
+  "name": "dotsy",
   "description": "Intended for use in educational software that may focus on subitizing, counting or arithmetic.",
   "keywords": [
+    "dotsy",
     "dots",
     "subitizing",
     "counting",
     "arithmetic"
   ],
   "version": "v1.1.0",
-  "types": "./dist/dots.d.ts",
+  "types": "./dist/dotsy.d.ts",
   "exports": {
     "node": {
-      "import": "./dist/dots.es2017.mjs",
-      "require": "./dist/dots.es2017.cjs"
+      "import": "./dist/dotsy.es2017.mjs",
+      "require": "./dist/dotsy.es2017.cjs"
     },
-    "default": "./dist/dots.es2017.mjs"
+    "default": "./dist/dotsy.es2017.mjs"
   },
   "files": [
     "dist/"
@@ -48,12 +49,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Symbolinker/dots.git"
+    "url": "git+https://github.com/Symbolinker/dotsy.git"
   },
   "author": "Symbolinker",
   "license": "0BSD",
   "bugs": {
-    "url": "https://github.com/Symbolinker/dots/issues"
+    "url": "https://github.com/Symbolinker/dotsy/issues"
   },
-  "homepage": "https://github.com/Symbolinker/dots#readme"
+  "homepage": "https://github.com/Symbolinker/dotsy#readme"
 }

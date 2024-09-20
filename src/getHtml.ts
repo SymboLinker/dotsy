@@ -16,7 +16,7 @@ export function getHtml(settings : Settings) : String {
         let top = coordinate.y - dot.radius;
         dotHtml += `<div style="display: block; width:${2 * dot.radius}${unit}; height: ${2 * dot.radius}${unit}; border-radius: 50%; background-color: ${dot.color}; position: absolute; left: ${left}${unit}; top: ${top}${unit}"></div>`;
     }
-    return `<div class="dots" style="position: relative; width: ${settings.width}${unit}; height:${settings.height}${unit}">` 
+    return `<div class="dotsy" style="position: relative; width: ${settings.width}${unit}; height:${settings.height}${unit}">` 
             + dotHtml 
             + `</div>`;
 }

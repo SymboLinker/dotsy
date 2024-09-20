@@ -4,12 +4,12 @@ import { getHtml, Settings } from '../../src/x';
 import { Dot } from '../../src/settings/Dot';
 
 describe('Basic stuff', () => {
-  it(`returns a div with class name "dots"`, () => {
+  it(`returns a div with class name "dotsy"`, () => {
     // Arrange
     let settings = new Settings();
     // Act
     let result = getHtml(settings);
     // Assert
-    expect(result.startsWith('<div class="dots"')).to.be.true;
+    expect(result.startsWith('<div class="dotsy"')).to.be.true;
   });
 });
