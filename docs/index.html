@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dotsy [unstyled example]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script type="module">
+      import * as dotsy from './dotsy.es2017-esm.min.js';
+      let settings = new dotsy.Settings();
+      settings.width = 80;
+      settings.height = 80;
+      settings.unit = 'vmin';
+
+      function getRandomIntInclusive(inclusiveMin, inclusiveMax) {
+            return inclusiveMin + Math.floor(Math.random() * (inclusiveMax - inclusiveMin + 1));
+        }
+
+        let d = (radius, color) => { 
+          let d = new dotsy.Dot();
+            d.radius = radius;
+            d.color = color;
+            return d;
+        }
+
+        function generate() {
+          let dots = [];
+
+          let numberOfBlueDots = getRandomIntInclusive(3, 10);
+          for (let i = 0; i < numberOfBlueDots; i++) {
+              let size = getRandomIntInclusive(2, 5);
+              dots.push(d(size, 'blue'));
+          }
+
+          let numberOfYellowDots = getRandomIntInclusive(3, 10);
+          for (let i = 0; i < numberOfYellowDots; i++) {
+              let size = getRandomIntInclusive(2, 5);
+              dots.push(d(size, 'orange'));
+          }
+          settings.dots = dots;
+          let html = dotsy.getHtml(settings);
+          document.getElementById("put-it-here").innerHTML = html;
+        }
+
+        generate();
+
+        document.getElementById('next').onclick = () => generate();
+        
+    </script>
+  </head>
+  <body>
+    <p1>Available via <a href="https://github.com/SymboLinker/dotsy">GitHub</a>.</p1>
+    <div id="put-it-here">
+      
+    </div>
+    <button id="next" style="font-size: 4vmin">Next</button>
+  </body>
+</html>
