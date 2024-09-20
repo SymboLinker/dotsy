@@ -1,8 +1,8 @@
-import { Settings } from './Settings';
+import { Settings } from './public/Settings';
 export { Settings };
 
-import { getHtml } from './getHtml';
+import { getHtml } from './public/getHtml';
 export { getHtml };
 
-import { Dot } from './settings/Dot';
+import { Dot } from './public/Dot';
 export { Dot };

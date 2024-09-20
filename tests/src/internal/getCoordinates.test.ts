@@ -1,6 +1,6 @@
 import { describe } from 'mocha';
 import { expect } from 'chai';
-import { getCoordinates as getCoordinates } from '../../../src/internal/getCoordinates';
+import { getCoordinates } from '../../../src/internal/getCoordinates';
 import { Settings } from '../../../src/x';
 import { Coordinate } from '../../../src/internal/Coordinate';
 
@@ -13,9 +13,6 @@ describe(getCoordinates.name, () => {
     // Act
     let result = getCoordinates(settings);
     // Assert
-    for (let i = 0; i < 25; i++) {
-        
-    }
     expect(result).to.eql([
         /*
             The initial 'distances' are:
@@ -41,9 +38,6 @@ describe(getCoordinates.name, () => {
     // Act
     let result = getCoordinates(settings);
     // Assert
-    for (let i = 0; i < 16; i++) {
-        
-    }
     expect(result).to.eql([
         /*
             The initial 'distances' are:

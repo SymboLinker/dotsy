@@ -11,31 +11,29 @@
       settings.height = 80;
       settings.unit = 'vmin';
 
-      function getRandomInt(exclusiveMax) {
-            return Math.floor(Math.random() * exclusiveMax);
+      function getRandomIntInclusive(inclusiveMin, inclusiveMax) {
+            return inclusiveMin + Math.floor(Math.random() * (inclusiveMax - inclusiveMin + 1));
         }
 
-        let d = (radius, color = null) => { 
+        let d = (radius, color) => { 
           let d = new dotsy.Dot();
             d.radius = radius;
-            if (color != null) {
-                d.color = color;
-            }
+            d.color = color;
             return d;
         }
 
         function generate() {
           let dots = [];
 
-          let numberOfBlueDots = getRandomInt(8) + 3;
+          let numberOfBlueDots = getRandomIntInclusive(3, 10);
           for (let i = 0; i < numberOfBlueDots; i++) {
-              let size = getRandomInt(3) + 2
-              dots.push(d(size));
+              let size = getRandomIntInclusive(2, 5);
+              dots.push(d(size, 'blue'));
           }
 
-          let numberOfYellowDots = getRandomInt(8) + 3;
+          let numberOfYellowDots = getRandomIntInclusive(3, 10);
           for (let i = 0; i < numberOfYellowDots; i++) {
-              let size = getRandomInt(3) + 2
+              let size = getRandomIntInclusive(2, 5);
               dots.push(d(size, 'orange'));
           }
           settings.dots = dots;
@@ -51,8 +49,8 @@
   </head>
   <body>
     <div id="put-it-here">
-
+      
     </div>
-    <button id="next">Next</button>
+    <button id="next" style="font-size: 4vmin">Next</button>
   </body>
 </html>

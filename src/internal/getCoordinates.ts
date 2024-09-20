@@ -1,6 +1,6 @@
 import { Coordinate } from "./Coordinate";
-import { difference } from "../helpers/difference";
-import { Settings } from "../Settings";
+import { difference } from "./difference";
+import { Settings } from "../public/Settings";
 
 export function getCoordinates(settings: Settings) : Coordinate[] {
     let coordinates = [];

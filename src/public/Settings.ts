@@ -1,4 +1,4 @@
-import { Dot } from "./settings/Dot"
+import { Dot } from "./Dot"
 
 export class Settings {
     dots : Dot[] = [];

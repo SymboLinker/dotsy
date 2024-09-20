@@ -1,8 +1,8 @@
 import { DotCoordinateInfo } from "./DotCoordinateInfo";
-import { random } from "../helpers/random";
+import { random } from "./random";
 import { Coordinate } from "./Coordinate";
 import { distance } from "./distance";
-import { Dot } from "../settings/Dot";
+import { Dot } from "../public/Dot";
 
 export function getDotCoordinateInfos(dots: Dot[], coordinates: Coordinate[]) {
     let dotCoordinateInfo: DotCoordinateInfo[] = [];

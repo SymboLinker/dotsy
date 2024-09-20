@@ -1,5 +1,5 @@
 import { Coordinate } from "./Coordinate";
-import { Dot } from "../settings/Dot";
+import { Dot } from "../public/Dot";
 
 export class DotCoordinateInfo {
     dot: Dot;
