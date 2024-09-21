@@ -1,4 +1,8 @@
 export class Dot {
-    color = '#ffa500';
-    radius = 5;
+    radius : number;
+    color : string;
+    constructor(radius = 2, color = '#ffa500') {
+        this.radius = radius;
+        this.color = color;
+    }
 }
