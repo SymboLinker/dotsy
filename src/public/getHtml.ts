@@ -14,9 +14,9 @@ export function getHtml(settings : Settings) : string {
         const coordinate = info.coordinate;
         const left = coordinate.x - dot.radius;
         const top = coordinate.y - dot.radius;
-        dotHtml += `<div style="position: absolute; left: ${left}${unit}; top: ${top}${unit}; display: block; width:${2 * dot.radius}${unit}; height: ${2 * dot.radius}${unit}; border-radius: 50%; background-color: ${dot.color}"></div>`;
+        dotHtml += `<div class="dotsy-dot" style="position: absolute; left: ${left}${unit}; top: ${top}${unit}; display: block; width:${2 * dot.radius}${unit}; height: ${2 * dot.radius}${unit}; border-radius: 50%; background-color: ${dot.color}"></div>`;
     }
-    return `<div class="dotsy" style="position: relative; width: ${settings.width}${unit}; height:${settings.height}${unit}">` 
+    return `<div class="dotsy-rectangle" style="position: relative; width: ${settings.width}${unit}; height:${settings.height}${unit}">`
             + dotHtml
             + `</div>`;
 }

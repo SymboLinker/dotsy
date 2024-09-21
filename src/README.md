@@ -1,9 +1,9 @@
 # Dotsy
 
-Dotsy is a JavaScript library with which you can display randomly positioned non-overlapping dots in a rectangular HTML element. You can set:
+Dotsy is a JavaScript library with which you can create HTML for randomly positioned, non-overlapping, customized dots. You can set:
+- the height and width of the container
 - the radius and color of each dot
-- the size of the rectangular container
-... and then Dotsy creates the HTML for you.
+Then Dotsy calculates the locations and creates the HTML for you.
 
 This library can be used, for example, in software that may focus on:
 - subitizing
