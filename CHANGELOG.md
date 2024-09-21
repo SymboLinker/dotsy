@@ -1,3 +1,3 @@
-## [0.1.0] 2024-09-19
+## [0.1.x] 2024-09-19
 
-Initial version.
+Initial version with updated readme in each patch number.
