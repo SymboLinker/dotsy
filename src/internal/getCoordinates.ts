@@ -3,10 +3,10 @@ import { difference } from "./difference";
 import { Settings } from "../public/Settings";
 
 export function getCoordinates(settings: Settings) : Coordinate[] {
-    let coordinates = [];
+    const coordinates = [];
     for (let x = 0; x < settings.width; x++) {
         for (let y = 0; y < settings.height; y++) {
-            let initialDistance = Math.min(
+            const initialDistance = Math.min(
                 x + 1, difference(x, settings.width),
                 y + 1, difference(y, settings.height)
             );

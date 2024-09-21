@@ -7,11 +7,11 @@ import { Coordinate } from '../../../src/internal/Coordinate';
 describe(getCoordinates.name, () => {
   it(`5 times 5`, () => {
     // Arrange
-    let settings = new Settings();
+    const settings = new Settings();
     settings.width = 5;
     settings.height = 5;
     // Act
-    let result = getCoordinates(settings);
+    const result = getCoordinates(settings);
     // Assert
     expect(result).to.eql([
         /*
@@ -32,11 +32,11 @@ describe(getCoordinates.name, () => {
 
   it(`4 times 4`, () => {
     // Arrange
-    let settings = new Settings();
+    const settings = new Settings();
     settings.width = 4;
     settings.height = 4;
     // Act
-    let result = getCoordinates(settings);
+    const result = getCoordinates(settings);
     // Assert
     expect(result).to.eql([
         /*
