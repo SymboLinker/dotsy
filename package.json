@@ -21,7 +21,7 @@
     "counting",
     "arithmetic"
   ],
-  "version": "v1.1.0",
+  "version": "v0.1.0",
   "types": "./dist/dotsy.d.ts",
   "exports": {
     "node": {
