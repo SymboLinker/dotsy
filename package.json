@@ -9,10 +9,14 @@
     "lock": "npm i --package-lock-only"
   },
   "name": "dotsy",
-  "description": "Intended for use in educational software that may focus on subitizing, counting or arithmetic.",
+  "description": "Display randomly positioned, non-overlapping, customized dots in a rectangular HTML element.",
   "keywords": [
     "dotsy",
     "dots",
+    "random",
+    "non-overlapping",
+    "color",
+    "size",
     "subitizing",
     "counting",
     "arithmetic"
