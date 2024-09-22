@@ -13,7 +13,9 @@ This library can be used, for example, in software that may focus on:
 
 ## How to use this library
 
-For a working example to play with online, see [symbolinker.github.io/dotsy](https://symbolinker.github.io/dotsy). The source code of the example can be found in the [docs](https://github.com/SymboLinker/dotsy/tree/main/docs) folder of the repository.
+For an online example to play with, see [symbolinker.github.io/dotsy](https://symbolinker.github.io/dotsy). The source code of the example can be found in the [docs](https://github.com/SymboLinker/dotsy/tree/main/docs) folder.
+
+Of the source code of the library itself, you only need to have a look inside the [src/public](https://github.com/SymboLinker/dotsy/tree/main/src/public) folder. A note about `getHtml`: it returns a container `div` with `class="dotsy-rectangle"` and this contains for each dot a div with `class="dotsy-dot"`. This allows you to easily add touch/click event handlers.
 
 How to add it to your project? There are various ways:
 
@@ -29,7 +31,7 @@ There is no need to download or install anything. Your website just needs to hav
 <strong>esm</strong>: the ECMAScript module is simply the best choice: easy, safe, future proof.<br/>
 <strong>iife</strong>: an immediately invoked function expression for browsers that do not support ESM.
 
-For each of those ".js" files there is a minified version (".min.js") - a smaller file (of only 17 kB) with the same capabilities.
+For each of those ".js" files there is a minified version (".min.js") - a smaller file (of only 2 kB) with the same capabilities.
 
 A `<script>` element using the recommended "dotsy.es2017-esm.min.js":
 
